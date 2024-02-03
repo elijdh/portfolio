@@ -37,7 +37,7 @@ This is my personal portfolio website, built using Next.js, JavaScript, TypeScri
 
   MONGODB_URI=your_mongodb_connection_string
 
-*Replace your_mongodb_connection_string with your actual MongoDB connection string.*
+_Replace your_mongodb_connection_string with your actual MongoDB connection string._
 
 ### Usage
 
@@ -60,6 +60,6 @@ This project is licensed under the MIT License.
 
 ### Acknowledgements
 
-- Next.js
-- Tailwind CSS
-- Shadcn
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://ui.shadcn.com/)
