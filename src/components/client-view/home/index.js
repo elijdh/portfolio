@@ -74,7 +74,9 @@ export default function ClientHomeView({ data }) {
                       .map((item, index) => (
                         <span
                           className={`${
-                            index === 2 || index === 3 ? "text-red-main" : ""
+                            index === 2 || index === 3
+                              ? "text-red-main"
+                              : "text-foreground"
                           }`}
                         >
                           {item}{" "}
@@ -82,7 +84,7 @@ export default function ClientHomeView({ data }) {
                       ))
                   : null}
               </h1>
-              <p className="text-[#000] mt-4 mb-8 font-bold">
+              <p className="text-foreground mt-4 mb-8 font-bold">
                 {data && data.length ? data[0]?.summary : null}
               </p>
               <motion.div className="flex gap-3 cursor-pointer">
@@ -115,7 +117,7 @@ export default function ClientHomeView({ data }) {
                 dragConstraints={containerRef}
                 className="w-[400px] h-[400px] relative bg-red-main"
               >
-                <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-[#000000] relative ">
+                <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-foreground relative ">
                   {" "}
                 </div>
               </motion.div>

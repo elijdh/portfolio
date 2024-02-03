@@ -26,11 +26,11 @@ export default function ClientExperienceAndEducationView({
         <div className="flex flex-col gap-5">
           <AnimationWrapper className={"py-6 sm:py-16"}>
             <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
-              <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
+              <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium text-foreground">
                 {"Experience".split(" ").map((item, index) => (
                   <span
                     className={`${
-                      index === 0 ? "text-red-main" : "text-[#000]"
+                      index === 0 ? "text-red-main" : "text-foreground"
                     }`}
                   >
                     {item}{" "}
@@ -47,22 +47,22 @@ export default function ClientExperienceAndEducationView({
                     ? experienceData.map((experienceItem) => (
                         <TimelineItem>
                           <TimelineSeparator>
-                            <TimelineDot className="bg-red-500" />
+                            <TimelineDot className="bg-red-main" />
                             <TimelineConnector className="bg-red-main" />
                           </TimelineSeparator>
                           <TimelineContent>
                             <div className="border-[2px] p-4 rounded-[8px] border-red-main mt-[14px] ml-[16px]">
-                              <p className="font-bold">
+                              <p className="font-bold text-foreground">
                                 {experienceItem.duration}
                               </p>
-                              <h3 className="font-extrabold mt-2">
+                              <h3 className="font-extrabold text-foreground mt-2">
                                 {experienceItem.company},{" "}
                                 {experienceItem.location}
                               </h3>
-                              <p className="font-extrabold mt-2">
+                              <p className="font-extrabold text-foreground mt-2">
                                 {experienceItem.position}
                               </p>
-                              <p className="font-extralight mt-2">
+                              <p className="font-extralight text-foreground mt-2">
                                 {experienceItem.jobprofile}
                               </p>
                             </div>
@@ -82,7 +82,7 @@ export default function ClientExperienceAndEducationView({
                 {"Education".split(" ").map((item, index) => (
                   <span
                     className={`${
-                      index === 1 ? "text-red-main" : "text-[#000]"
+                      index === 1 ? "text-red-main" : "text-foreground"
                     }`}
                   >
                     {item}{" "}
@@ -103,12 +103,14 @@ export default function ClientExperienceAndEducationView({
                             <TimelineConnector className="bg-red-main" />
                           </TimelineSeparator>
                           <TimelineContent>
-                            <div className="border-[2px] p-4 rounded-[8px] border-red-main mt-[14px] ml-[16px]">
-                              <p className="font-bold">{educationItem.year}</p>
-                              <h3 className="font-extrabold mt-2">
+                            <div className="border-[2px] p-4 rounded-[8px] border-red-main mt-[14px] ml-[16px] ">
+                              <p className="font-bold text-foreground">
+                                {educationItem.year}
+                              </p>
+                              <h3 className="font-extrabold mt-2 text-foreground">
                                 {educationItem.college}
                               </h3>
-                              <p className="font-extrabold mt-2">
+                              <p className="font-extrabold mt-2 text-foreground">
                                 {educationItem.degree}
                               </p>
                             </div>

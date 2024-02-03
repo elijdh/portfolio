@@ -50,7 +50,7 @@ export default function ClientAboutView({ data }) {
       id="about"
     >
       <div className="w-full flex">
-        <AnimationWrapper className="rounded-lg w-full grid-flow-row grid grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-red-main bg-ehite-500 z-10">
+        <AnimationWrapper className="rounded-lg w-full grid-flow-row grid grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-red-main z-10">
           {aboutDataInfo.map((infoItem, index) => (
             <motion.div
               className={`flex items-center justify-start
@@ -71,7 +71,7 @@ export default function ClientAboutView({ data }) {
                   <p className="text-[50px] text-red-main font-bold">
                     {infoItem.value}+
                   </p>
-                  <p className="text-[25px] font-bold text-[#000000]">
+                  <p className="text-[25px] font-bold text-foreground">
                     {infoItem.label}
                   </p>
                 </div>
@@ -86,13 +86,17 @@ export default function ClientAboutView({ data }) {
             <h1 className="leading-[70px] mb-4 text-xl lg:text-4xl xl:text-5xl font-medium">
               {headingText.split(" ").map((item, index) => (
                 <span
-                  className={`${index === 1 ? "text-red-main" : "text-[#000]"}`}
+                  className={`${
+                    index === 1 ? "text-red-main" : "text-foreground"
+                  }`}
                 >
                   {item}{" "}
                 </span>
               ))}
             </h1>
-            <p className="text-[#000] mt-4 mb-8 font-bold">{data?.aboutme}</p>
+            <p className="text-foreground mt-4 mb-8 font-bold">
+              {data?.aboutme}
+            </p>
           </motion.div>
         </div>
       </AnimationWrapper>

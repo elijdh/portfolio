@@ -80,7 +80,9 @@ export default function ClientContactView() {
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {"Contact Me".split(" ").map((item, index) => (
               <span
-                className={`${index === 1 ? "text-red-main" : "text-[#000]"}`}
+                className={`${
+                  index === 1 ? "text-red-main" : "text-foreground"
+                }`}
               >
                 {item}{" "}
               </span>
@@ -95,12 +97,13 @@ export default function ClientContactView() {
               {controls.map((controlItem) =>
                 controlItem.name === "message" ? (
                   <div className="p-2 w-full">
-                    <label className="text-sm text-[#000]">
+                    <label className="text-sm text-foreground">
                       {controlItem.label}
                     </label>
                     <textarea
                       id={controlItem.name}
                       name={controlItem.name}
+                      placeholder={controlItem.placeholder}
                       value={formData[controlItem.name]}
                       onChange={(e) =>
                         setFormData({
@@ -108,17 +111,18 @@ export default function ClientContactView() {
                           [controlItem.name]: e.target.value,
                         })
                       }
-                      className="w-full border-red-main border-[2px] bg-[#ffffff] rounded min-h-40 text-base outline-none text-[#000000] py-1 px-3 resize-y leading-6"
+                      className="w-full border-input border-[2px] bg-[#ffffff] rounded min-h-40 text-base outline-none text-[#000000] py-1 px-3 resize-y leading-6"
                     ></textarea>
                   </div>
                 ) : (
                   <div className="p-2 w-full">
-                    <label className="text-sm text-[#000]">
+                    <label className="text-sm text-foreground">
                       {controlItem.label}
                     </label>
                     <input
                       id={controlItem.name}
                       name={controlItem.name}
+                      placeholder={controlItem.placeholder}
                       value={formData[controlItem.name]}
                       onChange={(e) =>
                         setFormData({
@@ -126,7 +130,7 @@ export default function ClientContactView() {
                           [controlItem.name]: e.target.value,
                         })
                       }
-                      className="w-full border-red-main border-[2px] bg-[#ffffff] rounded h-[32px] text-base outline-none text-[#000000] py-1 px-3 resize-none leading-6"
+                      className="w-full border-input border-[2px] bg-[#ffffff] rounded h-[32px] text-base outline-none text-[#000000] py-1 px-3 resize-none leading-6"
                     />
                   </div>
                 )

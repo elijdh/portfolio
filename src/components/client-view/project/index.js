@@ -20,7 +20,9 @@ export default function ClientProjectView({ data }) {
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {"My Projects".split(" ").map((item, index) => (
               <span
-                className={`${index === 1 ? "text-red-main" : "text-[#000]"}`}
+                className={`${
+                  index === 1 ? "text-red-main" : "text-foreground"
+                }`}
               >
                 {item}{" "}
               </span>
@@ -32,7 +34,7 @@ export default function ClientProjectView({ data }) {
               cy={"50"}
               r="30"
               pathLength={"1"}
-              className="stroke-[#000]"
+              className="stroke-foreground"
             />
             <motion.circle
               cx={"50"}
@@ -57,10 +59,10 @@ export default function ClientProjectView({ data }) {
                     <div className="flex p-4 flex-col xl:flex-row w-full items-stretch xl:items-center">
                       <div className="flex order-2 xl:order-1">
                         <div className="flex flex-col">
-                          <h3 className="text-3xl text-black-600 capitalize font-extrabold">
+                          <h3 className="text-3xl text-foreground capitalize font-extrabold">
                             {item.name}
                           </h3>
-                          <p className="text-sm mt-2 text-black-500 capitalize font-bold">
+                          <p className="text-sm mt-2 text-foreground capitalize font-bold">
                             {item.createdAt.split("T")[0]}
                           </p>
                           <div className="grid gap-2 mt-5 grid-cols-2 h-full max-h-[200px] w-full">

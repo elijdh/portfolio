@@ -11,7 +11,9 @@ const Header = () => {
           <Link href={"/"}>
             <Image src={"/darklogo.svg"} width={220} height={48} />
           </Link>
-          <ModeToggle />
+          <div className="ml-auto">
+            <ModeToggle />
+          </div>
         </div>
       </div>
     </header>
