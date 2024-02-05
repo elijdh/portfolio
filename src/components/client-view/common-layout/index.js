@@ -17,7 +17,7 @@ export default function CommonLayout({ children }) {
     <>
       {pathName !== "/admin" ? <Header /> : null}
       {pathName !== "/admin" ? <NavBar /> : null}
-      <div className="outer">{children}</div>
+      <div className="">{children}</div>
     </>
   );
 }

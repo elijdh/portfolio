@@ -56,17 +56,17 @@ export default function ClientHomeView({ data }) {
   return (
     <>
       <div
-        className="flex flex-col inner justify-center items-center h-screen px-8 xl:px-16 mx-auto"
+        className="flex flex-col justify-center items-center h-screen px-8 xl:px-16 mx-auto"
         id="home"
       >
         <AnimationWrapper>
           <motion.div
             className={
-              "grid grid-flow-row sm:grid-flow-col justify-center grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+              "grid grid-flow-row justify-center grid-rows-2 md:grid-rows-1 md:grid-cols-2 lg:gris-cols-2: xl:grid-cols sm:grid-cols-1 gap-8 py-6 sm:py-24"
             }
             variants={setVariants}
           >
-            <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+            <div className="flex flex-col justify-center md:items-start sm:items-center row-start-1">
               <h1 className="text-3xl lg:text-4xl xl:text-6xl font-bold leading-normal">
                 {data && data.length
                   ? data[0].heading
@@ -111,17 +111,6 @@ export default function ClientHomeView({ data }) {
                 ))}
               </motion.div>
             </div>
-            <motion.div ref={containerRef} className="flex w-full justify-end">
-              <motion.div
-                drag
-                dragConstraints={containerRef}
-                className="w-[400px] h-[400px] relative bg-red-main"
-              >
-                <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-foreground relative ">
-                  {" "}
-                </div>
-              </motion.div>
-            </motion.div>
           </motion.div>
         </AnimationWrapper>
       </div>

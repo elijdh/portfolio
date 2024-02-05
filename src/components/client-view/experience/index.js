@@ -19,18 +19,20 @@ export default function ClientExperienceAndEducationView({
 
   return (
     <div
-      className="max-w-screen-xl inner h-screen pt-10 mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
+      className="max-w-screen-xl h-screen pt-10 mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="experience"
     >
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8">
         <div className="flex flex-col gap-5">
           <AnimationWrapper className={"py-6 sm:py-16"}>
             <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
-              <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium text-foreground">
+              <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground">
                 {"Experience".split(" ").map((item, index) => (
                   <span
                     className={`${
-                      index === 0 ? "text-red-main" : "text-foreground"
+                      index === 0
+                        ? "text-red-main"
+                        : "text-foreground font-bold"
                     }`}
                   >
                     {item}{" "}

@@ -92,7 +92,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex flex-col items-center gap-y-4 md:px-[8px] lg:px-[8px] xl:px-[8px] fixed h-max bottom-0 mt-auto z-50 top-0 w-full md:right-[2%] md:justify-center md:w-16 md:max-w-md md:h-screen l:right-[2%] l:justify-center l:w-16 l:max-w-md x:h-screen xl:right-[2%] xl:justify-center xl:w-16 xl:max-w-md xl:h-screen ">
+      <nav className="flex flex-col items-center gap-y-4 md:px-[8px] lg:px-[8px] xl:px-[8px] fixed h-max bottom-0 mt-auto z-50 top-0 w-full md:right-[2%] md:justify-center md:w-16 md:max-w-md md:h-screen l:right-[2%] l:justify-center l:w-16 l:max-w-md xl:right-[2%] xl:justify-center xl:w-16 xl:max-w-md xl:h-screen ">
         <div className="transition duration-300 ease-in-out flex w-full items-center justify-between gap-y-10 px-4 py-4 md:py-6 lg:py-6 xl:py-6 bg-foreground/20 opacity-80 hover:opacity-100 backdrop-blur-sm text-3xl md:justify-center md:flex-col md:px-0 md:h-max md:text-xl md:rounded-full l:justify-center l:flex-col l:px-0 l:h-max l:text-xl l:rounded-full xl:justify-center xl:flex-col xl:px-0 xl:h-max xl:text-xl xl:rounded-full ">
           <CreateMenus
             setActiveLink={setActiveLink}

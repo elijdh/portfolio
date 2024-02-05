@@ -58,16 +58,6 @@ body {
 p {
   color: #000000;
 }
-.outer {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-
-.inner {
-  height: 100%;
-  scroll-snap-align: center;
-}
 .animation-hover:after {
   background: none repeat scroll 0 0 transparent;
   content: "";

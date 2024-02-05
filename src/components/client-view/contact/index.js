@@ -72,12 +72,12 @@ export default function ClientContactView() {
   console.log(isValidForm(), "isValidForm");
   return (
     <div
-      className="flex flex-col inner justify-center items-center h-screen sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
+      className="flex flex-col justify-center items-center h-screen sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="contact"
     >
       <AnimationWrapper className="py-6">
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
-          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
+          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold">
             {"Contact Me".split(" ").map((item, index) => (
               <span
                 className={`${

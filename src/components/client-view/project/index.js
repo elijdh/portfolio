@@ -12,12 +12,12 @@ export default function ClientProjectView({ data }) {
 
   return (
     <div
-      className="max-w-screen-xl inner h-screen pt-10 mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
+      className="max-w-screen-xl h-screen pt-10 mt-auto mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="project"
     >
       <AnimationWrapper className={"py-6 sm:py-16"}>
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
-          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
+          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-bold">
             {"My Projects".split(" ").map((item, index) => (
               <span
                 className={`${

@@ -26,7 +26,7 @@ const skillItemVariant = {
 
 export default function ClientAboutView({ data }) {
   const setVariants = useMemo(() => variants(), []);
-
+  /*
   const aboutDataInfo = [
     {
       label: "Client",
@@ -40,16 +40,16 @@ export default function ClientAboutView({ data }) {
       label: "Experience",
       value: data?.yearofexperience || "0",
     },
-  ];
+  ];*/
 
   const headingText = "Why Elijah?";
 
   return (
     <div
-      className="flex flex-col inner justify-center items-center h-screen pb-20 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
+      className="flex flex-col justify-center items-center h-screen pb-20 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="about"
     >
-      <div className="w-full flex">
+      {/*<div className="w-full flex">
         <AnimationWrapper className="rounded-lg w-full grid-flow-row grid grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-red-main z-10">
           {aboutDataInfo.map((infoItem, index) => (
             <motion.div
@@ -79,11 +79,11 @@ export default function ClientAboutView({ data }) {
             </motion.div>
           ))}
         </AnimationWrapper>
-      </div>
+      </div>*/}
       <AnimationWrapper className={"pt-6"}>
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
           <motion.div variants={setVariants}>
-            <h1 className="leading-[70px] mb-4 text-xl lg:text-4xl xl:text-5xl font-medium">
+            <h1 className="leading-[70px] mb-4 text-xl lg:text-4xl xl:text-5xl font-bold">
               {headingText.split(" ").map((item, index) => (
                 <span
                   className={`${
@@ -94,26 +94,21 @@ export default function ClientAboutView({ data }) {
                 </span>
               ))}
             </h1>
-            <p className="text-foreground mt-4 mb-8 font-bold">
+            <p className="text-foreground text-center mt-4 mb-8 font-semibold">
               {data?.aboutme}
             </p>
           </motion.div>
         </div>
       </AnimationWrapper>
-      <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8">
-        <AnimationWrapper className="flex w-full">
-          <motion.div variants={setVariants} className="h-full w-full p-4">
-            {"insert image here"}
-          </motion.div>
-        </AnimationWrapper>
+      <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 gap-8  max-w-2xl">
         <AnimationWrapper className={"flex items-center w-full p-4"}>
           <motion.div
             variants={setVariants}
-            className="grid gap-4 grid-cols-3 h-full max-h-[200px] w-full"
+            className="flex flex-wrap justify-center items-center gap-4"
           >
-            {data?.skills.split(",").map((skill) => (
-              <motion.div className="w-full flex justify-center items-center">
-                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-red-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-red-main transition-all outline-none ">
+            {data?.skills.split(",").map((skill, index) => (
+              <motion.div key={index} className="flex-shrink-0">
+                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 px-6 border-[2px] border-red-main bg-[#fff] text-[#000] font-semibold rounded-lg tracking-widest hover:shadow-red-main transition-all outline-none ">
                   {skill}
                 </button>
               </motion.div>
